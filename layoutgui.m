@@ -80,8 +80,18 @@ function axes25_CreateFcn(HObject, ~, ~)
 
 
 % Hint: place code in OpeningFcn to populate axes25
-axes(HObject)
-imshow('jackspade.jpg')
+allFiles = dir('*.jpg');
+baseFileNames = {'Poker2.jpg', 'poker3.jpg', 'Poker4.jpg', 'Poker5.jpg', 'Poker6.jpg', 'Poker7.jpg', 'Poker8.jpg', 'Poker9.jpg', 'Poker10.jpg', 'PokerAce.jpg', 'PokerJack.jpg', 'Pokerking.jpg', 'PokerQueen.jpg'};
+numberOfFiles = length(13);
+randomOrder = [randperm(13)];
+for k = 1 : 13
+  filenumber = randomOrder(k);
+  fullFileName = fullfile(pwd, baseFileNames{filenumber});
+
+% Hint: place code in OpeningFcn to populate axes25
+img = imread(fullFileName);
+imshow(img);
+end
 
 
 % --- Executes on button press in Higher.
@@ -90,7 +100,20 @@ function Higher_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 cla;
-imshow('jackspade.jpg');
+allFiles = dir('*.jpg');
+baseFileNames = {'Poker2.jpg', 'poker3.jpg', 'Poker4.jpg', 'Poker5.jpg', 'Poker6.jpg', 'Poker7.jpg', 'Poker8.jpg', 'Poker9.jpg', 'Poker10.jpg', 'PokerAce.jpg', 'PokerJack.jpg', 'Pokerking.jpg', 'PokerQueen.jpg'};
+numberOfFiles = length(13);
+randomOrder = [randperm(13)];
+for k = 1 : 13
+  filenumber = randomOrder(k);
+  fullFileName = fullfile(pwd, baseFileNames{filenumber});
+
+% Hint: place code in OpeningFcn to populate axes25
+img = imread(fullFileName);
+imshow(img);
+end
+
+
 
 % --- Executes on button press in Lower.
 function Lower_Callback(hObject, eventdata, handles)
@@ -98,7 +121,19 @@ function Lower_Callback(hObject, eventdata, handles)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
 cla;
-imshow('fivediamond.jpg');
+allFiles = dir('*.jpg');
+baseFileNames = {'Poker2.jpg', 'poker3.jpg', 'Poker4.jpg', 'Poker5.jpg', 'Poker6.jpg', 'Poker7.jpg', 'Poker8.jpg', 'Poker9.jpg', 'Poker10.jpg', 'PokerAce.jpg', 'PokerJack.jpg', 'Pokerking.jpg', 'PokerQueen.jpg'};
+numberOfFiles = length(13);
+randomOrder = [randperm(13)];
+for k = 1 : 13
+  filenumber = randomOrder(k);
+  fullFileName = fullfile(pwd, baseFileNames{filenumber});
+
+% Hint: place code in OpeningFcn to populate axes25
+img = imread(fullFileName);
+imshow(img);
+end
+
 
 
 
