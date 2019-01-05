@@ -56,6 +56,14 @@ function StartMenu2_OpeningFcn(hObject, eventdata, handles, varargin)
 % Choose default command line output for StartMenu2
 handles.output = hObject;
 
+ah = axes('unit', 'normalized', 'position', [0 0 1 1]); 
+% import the background image and show it on the axes
+bg = imread('Background.jpeg'); imagesc(bg);
+% prevent plotting over the background and turn the axis off
+set(ah,'handlevisibility','off','visible','off')
+% making sure the background is behind all the other uicontrols
+uistack(ah, 'bottom');
+
 % Update handles structure
 guidata(hObject, handles);
 
@@ -102,6 +110,10 @@ function pushbutton1_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton1 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+set(gcf, 'Visible', 'off');
+%open second gui
+CardGame; %name of second gui
+
 
 
 % --- Executes on button press in pushbutton3.
@@ -109,6 +121,7 @@ function pushbutton3_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton3 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+close all
 
 
 
