@@ -7,4 +7,5 @@ Good Luck!
 
 Installation
 
-Download (‘file name’) into your default matlab folder. All of the sound files and images contained in the folder are there for the game to run correctly. Open StartMenu.m on matlab. Select the Editor tab and press run. This will load up the start menu GUI for the game. The start menu highlights how to play the game and allows the player to choose to proceed to play by clicking the ‘Start’ button. This will load the game, where the player can then play the game.
+Download (‘FinalGame’) into your default matlab folder. All of the sound files and images contained in the folder are there for the game to run correctly. Open StartMenu.m on matlab. Select the Editor tab and press run. This will load up the start menu GUI for the game. The start menu highlights how to play the game and allows the player to choose to proceed to play by clicking the ‘Start’ button. This will load the game, where the player can then play the game.
+
