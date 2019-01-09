@@ -175,6 +175,8 @@ button = questdlg(promptMessage, titleBarCaption, 'Yes', 'No', 'No');
 if strcmpi(button, 'Yes')
       close all
       
+      clear sound;
+      
 end
 
 
