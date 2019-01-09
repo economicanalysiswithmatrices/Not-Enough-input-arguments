@@ -67,6 +67,9 @@ uistack(ah, 'bottom');
 % Update handles structure
 guidata(hObject, handles);
 
+[y,fs]=audioread('casino.wav');
+     sound(y,fs)
+
 % UIWAIT makes StartMenu2 wait for user response (see UIRESUME)
 % uiwait(handles.figure1);
 
