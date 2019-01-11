@@ -220,6 +220,7 @@ global POINTS
 POINTS='Winnings Total: $0';
 POINTS=0;
 set(handles.edit4, 'String', 'Winnings Total: $0');
+set(handles.POINTS, 'String', 'GAME RESTARTED');
 
 
 % --- Executes on button press in pushbutton7.
