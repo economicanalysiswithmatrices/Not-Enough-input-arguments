@@ -232,6 +232,7 @@ function pushbutton7_Callback(hObject, eventdata, handles)
 % hObject    handle to pushbutton7 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    structure with handles and user data (see GUIDATA)
+clear sound;
 set(gcf, 'Visible', 'off');
 %open second gui
 StartMenu2; %name of second gui
