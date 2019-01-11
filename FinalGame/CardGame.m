@@ -224,7 +224,7 @@ set(handles.edit6,'String', ['High Score: $',num2str(POINTS)]);
 POINTS='Winnings Total: $0';
 POINTS=0;
 set(handles.edit4, 'String', 'Winnings Total: $0');
-set(handles.POINTS, 'String', 'GAME RESTARTED');
+set(handles.POINTS, 'String', 'HIGH-SCORE SAVED');
 
 
 % --- Executes on button press in pushbutton7.
