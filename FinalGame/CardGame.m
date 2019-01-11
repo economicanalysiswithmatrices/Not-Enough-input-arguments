@@ -22,7 +22,7 @@ function varargout = CardGame(varargin)
 
 	% Edit the above text to modify the response to help CardGame
 
-	% Last Modified by GUIDE v2.5 03-Jan-2019 22:02:05
+	% Last Modified by GUIDE v2.5 11-Jan-2019 15:54:40
 
 	% Begin initialization code - DO NOT EDIT
 	gui_Singleton = 1;
@@ -217,6 +217,10 @@ function pushbutton6_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 global POINTS
 
+highScore = max(POINTS);
+set(handles.edit6, 'String', highScore)
+set(handles.edit6,'String', ['High Score: $',num2str(POINTS)]);
+
 POINTS='Winnings Total: $0';
 POINTS=0;
 set(handles.edit4, 'String', 'Winnings Total: $0');
@@ -268,6 +272,33 @@ function edit4_Callback(hObject, eventdata, handles)
 % --- Executes during object creation, after setting all properties.
 function edit4_CreateFcn(hObject, eventdata, handles)
 % hObject    handle to edit4 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    empty - handles not created until after all CreateFcns called
+
+% Hint: edit controls usually have a white background on Windows.
+%       See ISPC and COMPUTER.
+if ispc && isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
+    set(hObject,'BackgroundColor','white');
+end
+
+
+
+function edit6_Callback(hObject, eventdata, handles)
+% hObject    handle to edit6 (see GCBO)
+% eventdata  reserved - to be defined in a future version of MATLAB
+% handles    structure with handles and user data (see GUIDATA)
+
+% Hints: get(hObject,'String') returns contents of edit6 as text
+%        str2double(get(hObject,'String')) returns contents of edit6 as a double
+global POINTS
+highScore = max(POINTS);
+set(handles.edit6,'String', ['Winnings total: $',num2str(POINTS)]);
+
+
+
+% --- Executes during object creation, after setting all properties.
+function edit6_CreateFcn(hObject, eventdata, handles)
+% hObject    handle to edit6 (see GCBO)
 % eventdata  reserved - to be defined in a future version of MATLAB
 % handles    empty - handles not created until after all CreateFcns called
 
