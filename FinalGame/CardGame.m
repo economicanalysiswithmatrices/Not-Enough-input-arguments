@@ -219,12 +219,12 @@ global POINTS
 
 highScore = max(POINTS);
 set(handles.edit6, 'String', highScore)
-set(handles.edit6,'String', ['High Score: $',num2str(POINTS)]);
+set(handles.edit6,'String', ['Previous Score: $',num2str(POINTS)]);
 
 POINTS='Winnings Total: $0';
 POINTS=0;
 set(handles.edit4, 'String', 'Winnings Total: $0');
-set(handles.POINTS, 'String', 'HIGH-SCORE SAVED');
+set(handles.POINTS, 'String', 'SCORE SAVED');
 
 
 % --- Executes on button press in pushbutton7.
